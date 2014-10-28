@@ -83,14 +83,14 @@ public abstract class _SportService {
 		}
 	}
 
-	@OPTIONS
-	public Response cors(@javax.ws.rs.core.Context HttpHeaders requestHeaders) {
-		//Imprime los headers 	
-		for (String header : requestHeaders.getRequestHeaders().keySet()) {
-			System.out.println(header);
-		}
-		return Response.status(200).header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS").header("Access-Control-Allow-Headers", "AUTHORIZATION, content-type, accept, X_REST_USER").build();
-	}
+//	@OPTIONS
+//	public Response cors(@javax.ws.rs.core.Context HttpHeaders requestHeaders) {
+//		//Imprime los headers 	
+//		for (String header : requestHeaders.getRequestHeaders().keySet()) {
+//			System.out.println(header);
+//		}
+//		return Response.status(200).header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS").header("Access-Control-Allow-Headers", "AUTHORIZATION, content-type, accept, X_REST_USER").build();
+//	}
 
 	@POST
 	public Response createSport(SportDTO sport) {
